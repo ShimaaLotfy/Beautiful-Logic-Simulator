@@ -23,8 +23,8 @@ namespace OUR_LogicSimulator
         }
          public override void calculate()
          {
-            TexttempOutput 
-             AND and = new AND(Input[0], Input[1], tempOutput);
+            TextBox tempOut = new TextBox();
+             AND and = new AND(Input[0], Input[1], tempOut);
              NOT not = new NOT(Output, Output);
          }
     }

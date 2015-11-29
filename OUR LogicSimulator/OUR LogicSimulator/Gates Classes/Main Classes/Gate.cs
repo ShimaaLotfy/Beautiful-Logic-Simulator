@@ -11,7 +11,18 @@ namespace OUR_LogicSimulator
 {
    public class Gate
     {
-       
+       public Gate()
+        {
+
+        }
+        public Gate(TextBox in1, TextBox in2, TextBox o)
+        {
+            Input[0] = in1;
+            Input[1] = in2;
+            Output = o;
+            
+        }
+
        //protected List <TextBox> Input = new List <TextBox>();
         protected TextBox[] Input = new TextBox[2];
         protected TextBox Output;

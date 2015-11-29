@@ -16,8 +16,11 @@ namespace OUR_LogicSimulator
         {
             InitializeComponent();
 
-        or = new OR(Input1 , Input2 , Out);
-        nand = new NAND(Input3 , Out , Out2);
+            and2 = new AND(Input3,Out, Out2);
+            and1 = new AND(Input1, Input2, Out);
+            not1 = new NOT(Input4, Out3);
+            
+        //nand = new NAND(Input3 , Out , Out2);
         /* or = new OR();
          or.SetIp1(Input1);
          or.SetIp2(Input2);
@@ -29,13 +32,15 @@ namespace OUR_LogicSimulator
          nand.SetOp(Out2); */
 
         }
-    OR or;
-    NAND nand;
-
+    AND and1;
+        AND and2;
+        NOT not1;
         private void button1_Click(object sender, EventArgs e)
         {
-            or.validate();
-            nand.validate();
+            and1.validate();
+            and2.validate();
+            not1.validate();
+
         }
 
     }
