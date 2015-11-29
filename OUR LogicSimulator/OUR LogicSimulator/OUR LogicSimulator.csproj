@@ -67,18 +67,21 @@
     <Compile Include="Gates Classes 2\OrGate.cs" />
     <Compile Include="Gates Classes 2\XnorGate.cs" />
     <Compile Include="Gates Classes 2\XorGate.cs" />
-    <Compile Include="Gates Classes\AND.cs" />
-    <Compile Include="Gates Classes\Gate.cs" />
-    <Compile Include="Gates Classes\NAND.cs" />
-    <Compile Include="Gates Classes\NOR.cs" />
-    <Compile Include="Gates Classes\NOT.cs" />
-    <Compile Include="Gates Classes\OR.cs" />
-    <Compile Include="Gates Classes\XNOR.cs" />
-    <Compile Include="Gates Classes\XOR.cs" />
+    <Compile Include="Gates Classes\Main Classes\AND.cs" />
+    <Compile Include="Gates Classes\Main Classes\Gate.cs" />
+    <Compile Include="Gates Classes\No Logic\NAND.cs" />
+    <Compile Include="Gates Classes\No Logic\NOR.cs" />
+    <Compile Include="Gates Classes\Main Classes\NOT.cs" />
+    <Compile Include="Gates Classes\Main Classes\OR.cs" />
+    <Compile Include="Gates Classes\No Logic\XNOR.cs" />
+    <Compile Include="Gates Classes\Main Classes\XOR.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +105,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

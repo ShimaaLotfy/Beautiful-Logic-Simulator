@@ -36,7 +36,6 @@ namespace OUR_LogicSimulator
         {
             or.validate();
             nand.validate();
-
         }
 
     }

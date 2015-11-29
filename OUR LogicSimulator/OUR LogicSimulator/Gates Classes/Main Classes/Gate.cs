@@ -20,22 +20,33 @@ namespace OUR_LogicSimulator
         { 
         }
 
-        public void validate()
+        public virtual void validate()
         {
+            bool ThereIsNull = false; 
+
+            //check nulls in the inputs 
+            //turn the flag on and break if any Null is found 
             for (int i = 0; i < Input.Length; i++)
             {
-                if (Input[i].Text != "" && Input[i].Text != null )
+                if(Input[i].Text == "" || Input[i].Text == null)
                 {
-                    calculate();
-                }
-                else if (Input[i].Text == "" || Input[i].Text == null )
-                {
+                    ThereIsNull = true;
                     MessageBox.Show("Please Fill In All The Inputs");
+                    break;
                 }
+               
+            }
+
+            //calculate if the flag isn't turned on
+            if (!ThereIsNull)
+            {
+                calculate();
             }
 
         }
 
+        //Menna 
+        //Edit the code to point to reference of Textbox
         public void SetIp1(TextBox Input1)
         {
             Input[0] = Input1;
