@@ -41,7 +41,10 @@ namespace OUR_LogicSimulator
             r.SetInput(true);
             bool? p = r.GetOutput();
 
-
+            XorGate x = new XorGate();
+            x.SetInput(true);
+            x.SetInput(false);
+            bool? xO = x.GetOutput();
 
             AndGate g = new AndGate();
             g.SetInput(true);
@@ -49,8 +52,7 @@ namespace OUR_LogicSimulator
             g.SetInput(true);
             g.SetInput(false);
             bool? y = g.GetOutput();
-            textBox1.Text = Convert.ToString(y);
-
+            textBox1.Text = Convert.ToString(xO);
 
         }
 

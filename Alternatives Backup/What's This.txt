@@ -1,0 +1,3 @@
+This folder is intended for archiving the unchosen alternatives, 
+as a complete documentation for the project phases and for backup,
+in case of any needed reverses.

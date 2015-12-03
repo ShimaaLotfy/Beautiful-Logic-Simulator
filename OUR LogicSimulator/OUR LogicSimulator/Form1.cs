@@ -16,7 +16,7 @@ namespace OUR_LogicSimulator
         {
             InitializeComponent();
 
-            and2 = new AND(Input3,Out, Out2);
+            xor = new XOR(Input3,Out, Out2);
             and1 = new AND(Input1, Input2, Out);
             not1 = new NOT(Input4, Out3);
             
@@ -33,12 +33,12 @@ namespace OUR_LogicSimulator
 
         }
     AND and1;
-        AND and2;
+        XOR xor;
         NOT not1;
         private void button1_Click(object sender, EventArgs e)
         {
             and1.validate();
-            and2.validate();
+            xor.validate();
             not1.validate();
 
         }
