@@ -15,23 +15,24 @@ namespace OUR_LogicSimulator
         {
 
         }
-        public Gate(TextBox in1, TextBox in2, TextBox o)
+        public virtual void calculateOutput()
         {
-            Input[0] = in1;
-            Input[1] = in2;
-            Output = o;
-            
+        }
+        public virtual void validate()
+        {
         }
 
-       //protected List <TextBox> Input = new List <TextBox>();
+        #region Dealing With Integers
+
+        //protected List <TextBox> Input = new List <TextBox>();
         protected TextBox[] Input = new TextBox[2];
         protected TextBox Output;
 
-        public virtual void calculate()
+        public virtual void calculateInt()
         { 
         }
-
-        public virtual void validate()
+        
+        public virtual void validateInt()
         {
             bool ThereIsNull = false; 
 
@@ -51,31 +52,33 @@ namespace OUR_LogicSimulator
             //calculate if the flag isn't turned on
             if (!ThereIsNull)
             {
-                calculate();
+                calculateInt();
             }
 
         }
 
         //Menna 
         //Edit the code to point to reference of Textbox
-        public void SetIp1(TextBox Input1)
+        public void SetTextBoxIp1(TextBox Input1)
         {
             Input[0] = Input1;
 
         }
 
-        public void SetIp2(TextBox Input2)
+        public void SetTextBoxIp2(TextBox Input2)
         {
             Input[1] = Input2;
 
         }
 
-        public void SetOp(TextBox Out)
+        public void SetTextBoxOp(TextBox Out)
         {
             Output = Out;
 
         }
-       
+        #endregion
+
+
     }
 
    

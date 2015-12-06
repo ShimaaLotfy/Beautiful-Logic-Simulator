@@ -14,7 +14,11 @@ namespace OUR_LogicSimulator
        { 
        }
 
-        public override void validate()
+
+
+        #region Dealing With Integers
+
+        public override void validateInt()
         {
             //if (Input.Length > 1)
             //{
@@ -26,7 +30,7 @@ namespace OUR_LogicSimulator
                 MessageBox.Show("Please specify an input for the Not Gate :')");
             }
             else
-                calculate();
+                calculateInt();
         }
 
         public NOT(TextBox Input1, TextBox Out)
@@ -34,7 +38,8 @@ namespace OUR_LogicSimulator
            Input[0] = Input1;
            Output = Out;
        }
-       public override void calculate()
+
+       public override void calculateInt()
        {
             if (Input[0].Text == "0")
             {
@@ -44,6 +49,8 @@ namespace OUR_LogicSimulator
             {
                 Output.Text = "0";
             }
+
+            //Binary
             //byte[] b = Convert.FromBase64String(Input[0].Text);
             //byte[] o = new byte[2];
             //for(int i=0; i<2; i++)
@@ -53,5 +60,6 @@ namespace OUR_LogicSimulator
             //Output.Text = Convert.ToBase64String(o);
 
         }
+        #endregion
     }
 }

@@ -14,17 +14,22 @@ namespace OUR_LogicSimulator
        { 
        }
 
-       public NOR(TextBox Input1, TextBox Input2, TextBox Out)
+
+        #region Dealing With Integers
+
+        public NOR(TextBox Input1, TextBox Input2, TextBox Out)
         {
             Input[0] = Input1;
             Input[1] = Input2;
             Output = Out;
         }
 
-       public override void calculate()
+       public override void calculateInt()
        {
            OR or = new OR(Input[0], Input[1], Output);
            NOT not = new NOT(Output, Output);
        }
+
+        #endregion
     }
 }

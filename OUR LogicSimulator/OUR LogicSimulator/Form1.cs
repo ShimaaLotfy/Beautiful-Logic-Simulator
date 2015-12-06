@@ -19,27 +19,42 @@ namespace OUR_LogicSimulator
             xor = new XOR(Input3,Out, Out2);
             and1 = new AND(Input1, Input2, Out);
             not1 = new NOT(Input4, Out3);
-            
+
+            GatesList.Add(new AND());
+            GatesList.Add(xor);
+            GatesList.Add(not1);
+
+            foreach( Gate g in GatesList){
+
+                g.calculateOutput();
+            }
+
         //nand = new NAND(Input3 , Out , Out2);
         /* or = new OR();
          or.SetIp1(Input1);
          or.SetIp2(Input2);
          or.SetOp(Out);
-
+         
          nand = new NAND();
          nand.SetIp1(Input3);
          nand.SetIp2(Out);
          nand.SetOp(Out2); */
 
         }
-    AND and1;
+        void AddCreatedGate(Gate g)
+        {
+            GatesList.Add(g);
+        }
+        public  <Gate> GatesList = new List<Gate>();
+
+        AND and1;
         XOR xor;
         NOT not1;
         private void button1_Click(object sender, EventArgs e)
         {
-            and1.validate();
-            xor.validate();
-            not1.validate();
+            and1.validateInt();
+            xor.validateInt();
+            not1.validateInt();
 
         }
 

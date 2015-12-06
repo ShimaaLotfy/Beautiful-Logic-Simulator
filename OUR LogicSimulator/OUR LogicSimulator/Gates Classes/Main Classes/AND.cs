@@ -14,6 +14,12 @@ namespace OUR_LogicSimulator
         { 
         }
 
+        public override void calculateOutput()
+        {
+            
+        }
+             
+        #region Dealing With Integers
         public AND(TextBox Input1, TextBox Input2, TextBox Out)
         {
             Input[0] = Input1;
@@ -21,12 +27,10 @@ namespace OUR_LogicSimulator
             Output = Out;
 
         }
-
-
-        public override void calculate()
+        public override void calculateInt()
         {
 
-            int x = Convert.ToInt32(Input[0].Text);
+            int x = Convert.ToInt32(Input[0].value);
             int y = Convert.ToInt32(Input[1].Text);
 
             if (x == 1 && y == 1)
@@ -38,5 +42,6 @@ namespace OUR_LogicSimulator
                 Output.Text = "0";
             }
         }
+        #endregion
     }
 }

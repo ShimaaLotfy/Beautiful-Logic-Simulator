@@ -14,6 +14,9 @@ namespace OUR_LogicSimulator
         { 
         }
 
+
+
+        #region Dealing With Integers
         public OR(TextBox Input1, TextBox Input2, TextBox Out)
         {
             Input[0] = Input1;
@@ -23,7 +26,7 @@ namespace OUR_LogicSimulator
 
         }
 
-        public override void calculate()
+        public override void calculateInt()
         {
             int x = Convert.ToInt32(Input[0].Text);
             int y = Convert.ToInt32(Input[1].Text);
@@ -38,7 +41,8 @@ namespace OUR_LogicSimulator
 
 
         }
+        #endregion
     }
 
-    
+
 }

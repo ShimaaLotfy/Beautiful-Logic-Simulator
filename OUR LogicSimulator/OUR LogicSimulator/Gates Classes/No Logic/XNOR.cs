@@ -13,6 +13,9 @@ namespace OUR_LogicSimulator.Classes
         { 
         }
 
+
+        #region Dealing With Integers
+
         public XNOR(TextBox Input1, TextBox Input2, TextBox Out)
         {
             Input[0] = Input1;
@@ -20,10 +23,12 @@ namespace OUR_LogicSimulator.Classes
             Output = Out;
         }
 
-        public override void calculate()
+        public override void calculateInt()
         {
             XOR xor = new XOR(Input[0], Input[1], Output);
             NOT not = new NOT(Output, Output);
         }
+
+        #endregion
     }
 }
